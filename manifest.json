@@ -1,0 +1,36 @@
+{
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_title": "List GCP project",
+    "default_icon": "img/icon16.png",
+    "default_popup": "popup.html"
+  },
+  "description": "List Google Cloud Platform project",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "name": "Cloud Project Menu",
+  "permissions": [
+    "alarms",
+    "tabs",
+    "webNavigation",
+    "*://*.google.com/",
+    "https://console.developers.google.com/*"
+   ],
+  "content_scripts": [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "js": [
+            "js/contentScript.js"
+         ]
+      }
+  ],
+  "version": "0.0.1",
+  "manifest_version": 2
+}

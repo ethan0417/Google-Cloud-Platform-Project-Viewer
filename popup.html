@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/css/lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/lib/bootstrap/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="/css/style.css">
+      <script src='/js/lib/jquery-1.11.1.min.js'></script>
+      <script src='/js/popup.js'></script>
+
+   </head>
+   <body>
+      <div id='waring' class="alert alert-warning alert-dismissible hidden" role="alert">
+         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+         <strong>Warning!</strong> Please login your google cloud platform console and try again : )
+      </div>
+      <div id='error' class="alert alert-danger alert-dismissible hidden" role="alert">
+         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+         <strong>Warning!</strong> Please login your google cloud platform console and try again : )
+      </div>
+
+      <div class="panel panel-primary" id='project'>
+         <div class="panel-heading">Google Cloud Platform Project List</div>
+         <ul id='online_project_list' class='list-group'></ul>
+         <ul id='offline_project_list' class='list-group'></ul>
+      </div>
+
+
+
+
+      <div class="modal fade" id='loading' role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-sm">
+            <div class="modal-content text-center">Loading...</div>
+         </div>
+      </div>
+      <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
+   </body>
+</html>
