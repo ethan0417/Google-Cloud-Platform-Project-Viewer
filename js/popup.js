@@ -25,13 +25,13 @@ $(document).ready(function(){
           offLineHtml;
       if(status === 0){
          onLineHtml = '<li class="list-group-item"><ul class="list-inline"><li><h4>'+name+'</h4></li><li><a href='+projectURL
-               +' target="_blank">Project</a></li><li><a href='+billingURL
-               +' target="_blank">Billing</a></li></ul><small class="text-info">ID : '+assignedIdForDisplay+'</small></li>';
+               +' target="_blank">Project <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href='+billingURL
+               +' target="_blank">Billing <span class="glyphicon glyphicon-new-window"></span></a></li></ul><small class="text-info">ID : '+assignedIdForDisplay+'</small></li>';
          $('#online_project_list').append(onLineHtml);
       }else{
          offLineHtml = '<li class="list-group-item"><ul class="list-inline"><li>'+name+'</li><li><a href='+projectURL
-               +' target="_blank">Project</a></li><li><a href='+billingURL
-               +' target="_blank">Billing</a></li><li class="text-danger">(Ready to delete)</li></ul><small class="text-info">ID : '+assignedIdForDisplay+'</small></li>';
+               +' target="_blank">Project <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href='+billingURL
+               +' target="_blank">Billing <span class="glyphicon glyphicon-new-window"></span></a></li><li class="text-danger">(Ready to delete)</li></ul><small class="text-info">ID : '+assignedIdForDisplay+'</small></li>';
          $('#offline_project_list').append(offLineHtml);
       };
     };
