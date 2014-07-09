@@ -25,7 +25,7 @@ $(document).ready(function(){
           offLineHtml;
       if(status === 0){
          onLineHtml = '<li class="list-group-item"><ul class="list-inline"><li><h4>'+name+'</h4></li><li><a href='+projectURL
-               +' target="_self">Project</a></li><li><a href='+billingURL
+               +' target="_blank">Project</a></li><li><a href='+billingURL
                +' target="_blank">Billing</a></li></ul><small class="text-info">ID : '+assignedIdForDisplay+'</small></li>';
          $('#online_project_list').append(onLineHtml);
       }else{
