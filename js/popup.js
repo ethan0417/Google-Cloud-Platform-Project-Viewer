@@ -18,19 +18,20 @@ $(document).ready(function(){
           p_id = d.id,
           b_id = d.numericProjectId,
           name = d.name,
+          assignedIdForDisplay = d.assignedIdForDisplay,
           projectURL = projectLink + '/' + p_id,
           billingURL = billingLink + '/' + b_id,
           onLineHtml,
           offLineHtml;
       if(status === 0){
-         onLineHtml = '<li class="list-group-item"><ul class="list-inline"><li>'+name+'</li><li><a href='+projectURL
-               +' target="_blank">Project</a></li><li><a href='+billingURL
-               +' target="_blank">Billing</a></li></ul></li>';
+         onLineHtml = '<li class="list-group-item"><ul class="list-inline"><li><h4>'+name+'</h4></li><li><a href='+projectURL
+               +' target="_self">Project</a></li><li><a href='+billingURL
+               +' target="_blank">Billing</a></li></ul><small class="text-info">ID : '+assignedIdForDisplay+'</small></li>';
          $('#online_project_list').append(onLineHtml);
       }else{
          offLineHtml = '<li class="list-group-item"><ul class="list-inline"><li>'+name+'</li><li><a href='+projectURL
                +' target="_blank">Project</a></li><li><a href='+billingURL
-               +' target="_blank">Billing</a></li><li class="text-danger">(Ready to delete)</li></ul></li>';
+               +' target="_blank">Billing</a></li><li class="text-danger">(Ready to delete)</li></ul><small class="text-info">ID : '+assignedIdForDisplay+'</small></li>';
          $('#offline_project_list').append(offLineHtml);
       };
     };
