@@ -46,9 +46,12 @@ $(document).ready(function(){
     }).always(function(d){
       var status = d.status;
       if(status === 200){
+         // data is string.
          var data = d.responseText.replace(")]}'",'');
-         localStorage.data = data;
-         if(flag) listProject(JSON.parse(data));
+         // data is array
+         data = _.sortBy(JSON.parse(data), function(item){return item.assignedIdForDisplay})
+         localStorage.data = JSON.stringify(data);
+         if(flag) listProject(data);
          return false;
       }else{
         localStorage.removeItem("data");
